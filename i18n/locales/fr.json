@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "Catalogue Produits",
+    "subtitle": "Parcourez notre gamme complète de produits",
+    "categories": "Catégories",
+    "featured": "Produits en Vedette",
+    "viewAll": "Voir tout"
+  },
+  "nav": {
+    "home": "Accueil",
+    "admin": "Administration"
+  },
+  "product": {
+    "backToCategory": "Retour à la catégorie",
+    "noDescription": "Aucune description disponible."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "noProducts": "Aucun produit dans cette catégorie.",
+    "language": "Langue"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "产品目录",
+    "subtitle": "浏览我们的全系列产品",
+    "categories": "产品分类",
+    "featured": "精选产品",
+    "viewAll": "查看全部"
+  },
+  "nav": {
+    "home": "首页",
+    "admin": "管理后台"
+  },
+  "product": {
+    "backToCategory": "返回分类",
+    "noDescription": "暂无描述。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "noProducts": "该分类暂无产品。",
+    "language": "语言"
+  }
+}

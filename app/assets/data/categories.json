@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "id": "cat-001",
+      "slug": "electronics",
+      "order": 1,
+      "name": {
+        "en": "Electronics",
+        "zh": "电子产品",
+        "es": "Electrónica",
+        "fr": "Électronique"
+      }
+    },
+    {
+      "id": "cat-002",
+      "slug": "clothing",
+      "order": 2,
+      "name": {
+        "en": "Clothing",
+        "zh": "服装",
+        "es": "Ropa",
+        "fr": "Vêtements"
+      }
+    },
+    {
+      "id": "cat-003",
+      "slug": "home-living",
+      "order": 3,
+      "name": {
+        "en": "Home & Living",
+        "zh": "家居生活",
+        "es": "Hogar y Vida",
+        "fr": "Maison & Vie"
+      }
+    }
+  ]
+}

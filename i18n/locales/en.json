@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "Product Catalog",
+    "subtitle": "Browse our full range of products",
+    "categories": "Categories",
+    "featured": "Featured Products",
+    "viewAll": "View all"
+  },
+  "nav": {
+    "home": "Home",
+    "admin": "Admin"
+  },
+  "product": {
+    "backToCategory": "Back to category",
+    "noDescription": "No description available."
+  },
+  "common": {
+    "loading": "Loading...",
+    "noProducts": "No products in this category yet.",
+    "language": "Language"
+  }
+}
