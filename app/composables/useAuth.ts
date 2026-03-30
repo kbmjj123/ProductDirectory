@@ -59,6 +59,7 @@ export function useAuth() {
    * @returns 成功返回 null，失败返回错误信息字符串
    */
   async function login(username: string, password: string, token: string): Promise<string | null> {
+		debugger
     // 校验用户名
     if (username !== config.public.adminUsername) {
       return '用户名或密码错误'
@@ -95,6 +96,7 @@ export function useAuth() {
   /** 验证 GitHub Token 是否具备仓库写权限 */
   async function verifyToken(token: string): Promise<boolean> {
     try {
+			console.info(`https://api.github.com/repos/${config.public.githubOwner}/${config.public.githubRepo}`)
       const res = await fetch(
         `https://api.github.com/repos/${config.public.githubOwner}/${config.public.githubRepo}`,
         {
