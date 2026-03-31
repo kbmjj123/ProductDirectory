@@ -8,7 +8,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
   ],
-
+	tailwindcss: {
+    cssPath: "~/app/assets/css/tailwind.css"
+  },
   // SSG 静态站点生成
   ssr: true,
 
