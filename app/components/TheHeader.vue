@@ -43,7 +43,7 @@ const activeCategory = computed(() => {
               'px-3 py-1.5 rounded-lg text-sm whitespace-nowrap transition',
               activeCategory === cat.slug
                 ? 'bg-brand-50 text-brand-700 font-medium'
-                : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50',
+                : 'text-gray-50 hover:text-gray-900 hover:bg-gray-50',
             ]"
           >
             {{ cat.name[locale] || cat.name.en }}
@@ -56,7 +56,7 @@ const activeCategory = computed(() => {
 
           <!-- 移动端菜单按钮 -->
           <button
-            class="md:hidden p-2 rounded-lg text-gray-400 hover:bg-gray-50"
+            class="md:hidden p-2 rounded-lg text-gray-400 hover:bg-gray-50 transition-colors"
             @click="mobileMenuOpen = !mobileMenuOpen"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,18 +67,35 @@ const activeCategory = computed(() => {
         </div>
       </div>
     </div>
-
-    <!-- 移动端菜单 -->
-    <div v-if="mobileMenuOpen" class="md:hidden border-t border-gray-100 bg-white py-2 px-4">
-      <NuxtLink
-        v-for="cat in categories"
-        :key="cat.id"
-        :to="localePath(`/${cat.slug}`)"
-        class="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50"
-        @click="mobileMenuOpen = false"
-      >
-        {{ cat.name[locale] || cat.name.en }}
-      </NuxtLink>
-    </div>
   </header>
+
+  <!-- 🔥 升级后的移动端遮罩菜单（全屏覆盖 + 动画） -->
+  <div
+    v-if="mobileMenuOpen"
+    class="fixed inset-0 z-30 md:hidden"
+  >
+    <!-- 遮罩层 -->
+    <div 
+      class="absolute inset-0 bg-black/25 backdrop-blur-sm"
+      @click="mobileMenuOpen = false"
+    ></div>
+
+    <!-- 菜单内容 -->
+    <div 
+      class="absolute top-16 inset-x-0 bg-white shadow-lg border-t border-gray-100 transform transition-transform duration-300 ease-out"
+      :class="mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'"
+    >
+      <div class="px-4 py-3 space-y-1">
+        <NuxtLink
+          v-for="cat in categories"
+          :key="cat.id"
+          :to="localePath(`/${cat.slug}`)"
+          class="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors"
+          @click="mobileMenuOpen = false"
+        >
+          {{ cat.name[locale] || cat.name.en }}
+        </NuxtLink>
+      </div>
+    </div>
+  </div>
 </template>
