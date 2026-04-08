@@ -7,8 +7,8 @@
       "name": {
         "en": "Bags",
         "zh": "背包",
-        "es": "ElectrÃÂÃÂ³nica",
-        "fr": "ÃÂÃÂlectronique"
+        "es": "ElectrÃÂÃÂÃÂÃÂ³nica",
+        "fr": "ÃÂÃÂÃÂÃÂlectronique"
       }
     },
     {
@@ -17,9 +17,9 @@
       "order": 2,
       "name": {
         "en": "Shoes",
-        "zh": "鞋子",
+        "zh": "éå­",
         "es": "Ropa",
-        "fr": "VÃÂÃÂªtements"
+        "fr": "VÃÂÃÂÃÂÃÂªtements"
       }
     },
     {
@@ -28,7 +28,7 @@
       "order": 3,
       "name": {
         "en": "Belt",
-        "zh": "腰带",
+        "zh": "è°å¸¦",
         "es": "Hogar y Vida",
         "fr": "Maison & Vie"
       }
