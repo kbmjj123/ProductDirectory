@@ -143,8 +143,8 @@ watch(() => dialog.value.data.name?.en, (val) => {
             <p class="font-medium text-gray-900 text-sm">{{ cat.name.en }}</p>
             <p class="text-xs text-gray-400 mt-0.5">
               <span class="mr-3">zh: {{ cat.name.zh || '—' }}</span>
-              <span class="mr-3">es: {{ cat.name.es || '—' }}</span>
-              <span>fr: {{ cat.name.fr || '—' }}</span>
+              <!-- <span class="mr-3">es: {{ cat.name.es || '—' }}</span> -->
+              <!-- <span>fr: {{ cat.name.fr || '—' }}</span> -->
             </p>
           </div>
           <div class="text-xs text-gray-400 hidden sm:block">
@@ -173,7 +173,7 @@ watch(() => dialog.value.data.name?.en, (val) => {
         </div>
         <div class="p-6 space-y-4">
           <!-- 多语言名称 -->
-          <div v-for="lang in ['en', 'zh', 'es', 'fr']" :key="lang">
+          <div v-for="lang in ['en', 'zh']" :key="lang">
             <label class="block text-xs font-medium text-gray-500 mb-1.5 uppercase">{{ lang }}</label>
             <input
               v-model="(dialog.data.name as Record<string, string>)[lang]"

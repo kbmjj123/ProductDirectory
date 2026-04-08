@@ -132,6 +132,7 @@ export function useGithubApi() {
 	/** 读取所有分类 */
 	async function getCategories() {
 		const file = await getFile(CATEGORIES_PATH)
+		console.info(file)
 		if (!file) return { categories: [], sha: undefined }
 		const data = JSON.parse(file.content)
 		return { categories: data.categories ?? [], sha: file.sha }
