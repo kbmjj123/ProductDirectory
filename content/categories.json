@@ -13,11 +13,11 @@
     },
     {
       "id": "cat-002",
-      "slug": "clothing",
+      "slug": "shoes",
       "order": 2,
       "name": {
         "en": "Shoes",
-        "zh": "éå­",
+        "zh": "鞋子",
         "es": "Ropa",
         "fr": "VÃÂÃÂªtements"
       }
