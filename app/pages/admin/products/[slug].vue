@@ -63,7 +63,12 @@ watch(() => form.value.title.en, (val) => {
 
 // 图片双向绑定适配（UploadResult → ProductImage）
 const images = computed<UploadResult[]>({
-  get: () => form.value.images.map(img => ({ url: img.url, thumb: img.thumb })),
+  get: () => {
+		if(typeof form.value.images === 'object'){
+			return [{ url: form.value.images.url, thumb: form.value.images.thumb }]
+		}else 
+		return (form.value.images || []).map(img => ({ url: img.url, thumb: img.thumb }))
+	},
   set: (val) => {
     form.value.images = val.map(v => ({ url: v.url, thumb: v.thumb }))
   },
