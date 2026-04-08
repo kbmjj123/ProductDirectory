@@ -24,11 +24,11 @@
     },
     {
       "id": "cat-003",
-      "slug": "home-living",
+      "slug": "belt",
       "order": 3,
       "name": {
         "en": "Belt",
-        "zh": "Ã¥Â®Â¶Ã¥Â±ÂÃ§ÂÂÃ¦Â´Â»",
+        "zh": "腰带",
         "es": "Hogar y Vida",
         "fr": "Maison & Vie"
       }
