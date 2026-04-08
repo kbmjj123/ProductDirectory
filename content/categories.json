@@ -5,10 +5,10 @@
       "slug": "electronics",
       "order": 1,
       "name": {
-        "en": "Electronics",
-        "zh": "电子产品",
-        "es": "Electrónica",
-        "fr": "Électronique"
+        "en": "Bags",
+        "zh": "çµå­äº§å",
+        "es": "ElectrÃ³nica",
+        "fr": "Ãlectronique"
       }
     },
     {
@@ -17,9 +17,9 @@
       "order": 2,
       "name": {
         "en": "Clothing",
-        "zh": "服装",
+        "zh": "æè£",
         "es": "Ropa",
-        "fr": "Vêtements"
+        "fr": "VÃªtements"
       }
     },
     {
@@ -28,7 +28,7 @@
       "order": 3,
       "name": {
         "en": "Home & Living",
-        "zh": "家居生活",
+        "zh": "å®¶å±çæ´»",
         "es": "Hogar y Vida",
         "fr": "Maison & Vie"
       }
