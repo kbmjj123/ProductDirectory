@@ -15,8 +15,12 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: 'cloudflare-pages',
-  },
+		preset: "static",
+		static: true,
+		prerender: {
+			autoSubfolderIndex: false
+		}
+	},
 
   // 运行时配置（环境变量）
   runtimeConfig: {
@@ -52,7 +56,12 @@ export default defineNuxtConfig({
       { code: 'fr', language: 'fr-FR', name: 'Français', file: 'fr.json' },
     ],
     langDir: 'locales/',
-    lazy: true,
+		detectBrowserLanguage: {
+			useCookie: true,
+			cookieKey: 'i18n_redirected',
+			redirectOn: 'root'
+		},
+		compilation: { strictMessage: false, escapeHtml: false }
   },
 
   // 路由规则：后台页面不参与 SSG
