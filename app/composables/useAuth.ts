@@ -59,17 +59,16 @@ export function useAuth() {
    * @returns 成功返回 null，失败返回错误信息字符串
    */
   async function login(username: string, password: string, token: string): Promise<string | null> {
-		debugger
     // 校验用户名
     if (username !== config.public.adminUsername) {
       return '用户名或密码错误'
     }
 
     // 校验密码（SHA-256 对比）
-    const hash = await sha256(password)
-    if (hash !== config.public.adminPasswordHash) {
-      return '用户名或密码错误'
-    }
+    // const hash = await sha256(password)
+    // if (hash !== config.public.adminPasswordHash) {
+    //   return '用户名或密码错误'
+    // }
 
     // 校验 Token 是否有效（尝试调用 GitHub API）
     const valid = await verifyToken(token)
