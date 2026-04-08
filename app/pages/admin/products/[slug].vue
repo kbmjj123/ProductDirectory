@@ -103,11 +103,9 @@ function showToast(msg: string, type: 'success' | 'error') {
 
 const langTabs = [
   { key: 'en', label: 'English' },
-  { key: 'zh', label: '中文' },
-  { key: 'es', label: 'Español' },
-  { key: 'fr', label: 'Français' },
+  { key: 'zh', label: '中文' }
 ]
-const activeLang = ref<'en' | 'zh' | 'es' | 'fr'>('en')
+const activeLang = ref<'en' | 'zh'>('en')
 </script>
 
 <template>
