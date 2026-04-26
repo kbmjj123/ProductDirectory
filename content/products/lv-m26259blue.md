@@ -8,7 +8,7 @@ updatedAt: "2026-04-26T20:43:49.539Z"
 images:
   - 
   - url: "https://i.ibb.co/v4VTfj8c/d5fcced52d23.png"
-    thumb: "https://i.ibb.co/TMY7Jg5w/d5fcced52d23.png"
+- thumb: "https://i.ibb.co/TMY7Jg5w/d5fcced52d23.png"
 title:
   en: Lv M26259blue
   zh: 

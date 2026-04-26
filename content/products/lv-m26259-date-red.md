@@ -8,7 +8,7 @@ updatedAt: "2026-04-26T20:55:12.855Z"
 images:
   - 
   - url: "https://i.ibb.co/s9BV77Rn/a6f1e573d12d.png"
-    thumb: "https://i.ibb.co/k2dSZZBj/a6f1e573d12d.png"
+- thumb: "https://i.ibb.co/k2dSZZBj/a6f1e573d12d.png"
 title:
   en: Lv M26259 date red
   zh: 

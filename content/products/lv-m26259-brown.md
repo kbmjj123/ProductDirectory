@@ -8,7 +8,7 @@ updatedAt: "2026-04-26T20:46:09.866Z"
 images:
   - 
   - url: "https://i.ibb.co/CpRhYzHD/bd0a22f02830.png"
-    thumb: "https://i.ibb.co/Q7yrTfKt/bd0a22f02830.png"
+- thumb: "https://i.ibb.co/Q7yrTfKt/bd0a22f02830.png"
 title:
   en: Lv M26259 Brown
   zh: 
