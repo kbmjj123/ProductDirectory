@@ -41,7 +41,7 @@ export function parseProductMarkdown(raw: string): Product {
   if (Object.keys(result.data).length === 0) {
     throw new Error('无效的产品文件格式')
   }
-
+	console.info(result)
   return result.data as Product
 }
 
