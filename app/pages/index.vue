@@ -62,7 +62,7 @@ useHead({
     </section>
 
     <!-- 精选产品 -->
-    <section v-if="featuredProducts.length">
+    <section v-if="featuredProducts?.length">
       <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-5">
         {{ $t('home.featured') }}
       </h2>
