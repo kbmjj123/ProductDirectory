@@ -75,7 +75,9 @@ export default defineNuxtConfig({
   },
 	vite: {
     optimizeDeps: {
-      include: []
+      include: [
+				'@vueuse/core'
+			]
     }
   }
 })

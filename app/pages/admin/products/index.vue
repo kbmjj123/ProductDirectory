@@ -23,7 +23,7 @@ async function loadData() {
       getCategories(),
     ])
     categories.value = cats
-
+		debugger
     // 并行读取所有产品文件
     const productData = await Promise.allSettled(
       files.map(f => getProduct(f.name.replace('.md', ''))),

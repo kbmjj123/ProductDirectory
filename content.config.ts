@@ -11,7 +11,7 @@ const multiLang = z.object({
 // 产品图片结构
 const productImage = z.object({
   url: z.string(),
-  thumb: z.string().default(''),
+    thumb: z.string().default(''),
 })
 
 export default defineContentConfig({
