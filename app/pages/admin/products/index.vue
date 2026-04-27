@@ -36,7 +36,10 @@ async function loadData() {
             const p = parseProductMarkdown(r.value.content)
             return { ...p, sha: r.value.sha }
           }
-          catch { return null }
+          catch(e) {
+						console.info(e)
+						return null
+					}
         }
         return null
       })

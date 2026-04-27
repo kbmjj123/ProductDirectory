@@ -76,8 +76,13 @@ export default defineNuxtConfig({
 	vite: {
     optimizeDeps: {
       include: [
-				'@vueuse/core'
+				'@vueuse/core',
+				'gray-matter'
 			]
+    },
+		define: {
+      'process.env': {},
+      'Buffer': {}
     }
   }
 })

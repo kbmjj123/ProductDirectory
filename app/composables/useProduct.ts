@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+globalThis.Buffer = Buffer
 import matter from 'gray-matter'
 
 export interface ProductImage {
