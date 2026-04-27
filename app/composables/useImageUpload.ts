@@ -10,7 +10,7 @@
 
 export interface UploadResult {
   url: string      // 原图 URL
-    thumb: string    // 缩略图 URL
+  thumb: string    // 缩略图 URL
 }
 
 export interface UploadProgress {
@@ -63,7 +63,7 @@ export function useImageUpload() {
       reader.onload = () => {
         const result = reader.result as string
         // 去掉 "data:image/webp;base64," 前缀
-        resolve(result.split(',')[1])
+        resolve(result.split(',')[1]!)
       }
       reader.onerror = () => reject(new Error('FileReader 读取失败'))
       reader.readAsDataURL(blob)
@@ -91,7 +91,7 @@ export function useImageUpload() {
 
     return {
       url: json.data.display_url,
-        thumb: json.data.thumb?.url || json.data.display_url,
+      thumb: json.data.thumb?.url || json.data.display_url,
     }
   }
 
@@ -115,10 +115,10 @@ export function useImageUpload() {
     const results: UploadResult[] = []
 
     for (let i = 0; i < files.length; i++) {
-      const file = files[i]
+      const file = files[i] as File
 
       // Step 1: 转换为 WebP
-      progress[i].status = 'converting'
+      progress[i]!.status = 'converting'
       notify()
 
       let base64: string
@@ -127,14 +127,14 @@ export function useImageUpload() {
         base64 = await blobToBase64(blob)
       }
       catch (e: unknown) {
-        progress[i].status = 'error'
-        progress[i].error = e instanceof Error ? e.message : 'WebP 转换失败'
+        progress[i]!.status = 'error'
+        progress[i]!.error = e instanceof Error ? e.message : 'WebP 转换失败'
         notify()
         continue
       }
 
       // Step 2: 上传到 imgbb（失败自动重试一次）
-      progress[i].status = 'uploading'
+      progress[i]!.status = 'uploading'
       notify()
 
       let result: UploadResult | null = null
@@ -145,16 +145,16 @@ export function useImageUpload() {
         }
         catch (e: unknown) {
           if (attempt === 1) {
-            progress[i].status = 'error'
-            progress[i].error = e instanceof Error ? e.message : '上传失败'
+            progress[i]!.status = 'error'
+            progress[i]!.error = e instanceof Error ? e.message : '上传失败'
             notify()
           }
         }
       }
 
       if (result) {
-        progress[i].status = 'done'
-        progress[i].result = result
+        progress[i]!.status = 'done'
+        progress[i]!.result = result
         results.push(result)
         notify()
       }

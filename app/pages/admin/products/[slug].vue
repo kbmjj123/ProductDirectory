@@ -64,9 +64,6 @@ watch(() => form.value.title.en, (val) => {
 // 图片双向绑定适配（UploadResult → ProductImage）
 const images = computed<UploadResult[]>({
   get: () => {
-		if(typeof form.value.images === 'object'){
-			return [{ url: form.value.images.url,   thumb: form.value.images.thumb }]
-		}else 
 		return (form.value.images || []).map(img => ({ url: img.url,   thumb: img.thumb }))
 	},
   set: (val) => {
@@ -84,9 +81,10 @@ async function handleSave() {
 
   try {
     const markdown = productToMarkdown(form.value)
-    await saveProduct(form.value.slug, markdown, currentSha.value)
-    showToast('保存成功', 'success')
-    setTimeout(() => navigateTo('/admin/products'), 1000)
+		console.info(markdown)
+    // await saveProduct(form.value.slug, markdown, currentSha.value)
+    // showToast('保存成功', 'success')
+    // setTimeout(() => navigateTo('/admin/products'), 1000)
   }
   catch (e: unknown) {
     showToast(e instanceof Error ? e.message : '保存失败', 'error')

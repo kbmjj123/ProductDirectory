@@ -28,6 +28,7 @@ async function handleFiles(files: FileList | File[]) {
   const results = await uploadImages(fileArr, (p) => {
     progress.value = p
   })
+	console.info(results)
 
   // 追加到已有图片列表
   emit('update:modelValue', [...props.modelValue, ...results])
@@ -60,20 +61,22 @@ const isUploading = computed(() => progress.value.some(p => ['converting', 'uplo
     <!-- 已上传图片预览 -->
     <div v-if="modelValue.length" class="grid grid-cols-3 sm:grid-cols-4 gap-3">
       <div
-        v-for="(img, idx) in modelValue"
-        :key="img.url"
+        v-for="(imgItem, idx) in modelValue"
+        :key="imgItem.url"
         class="relative group aspect-square rounded-lg overflow-hidden border border-gray-200"
       >
-        <img :src="img.thumb || img.url" alt="" class="w-full h-full object-cover">
-        <button
-          class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"
-          type="button"
-          @click="removeImage(idx)"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-          </svg>
-        </button>
+				<template v-if="imgItem.thumb">
+					<img :src="imgItem.thumb || imgItem.url" alt="" class="w-full h-full object-cover">
+					<button
+						class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"
+						type="button"
+						@click="removeImage(idx)"
+					>
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+						</svg>
+					</button>
+				</template>
       </div>
     </div>
 
