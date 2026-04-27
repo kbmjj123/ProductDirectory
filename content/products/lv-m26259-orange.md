@@ -6,9 +6,8 @@ published: true
 createdAt: "2026-04-26T20:46:39.528Z"
 updatedAt: "2026-04-26T20:47:35.225Z"
 images:
-  - 
   - url: "https://i.ibb.co/LDQ2Q3qw/7011677b7d74.png"
-- thumb: "https://i.ibb.co/35fLfn8X/7011677b7d74.png"
+  thumb: "https://i.ibb.co/35fLfn8X/7011677b7d74.png"
 title:
   en: Lv M26259 orange
   zh: 

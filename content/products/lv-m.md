@@ -7,7 +7,7 @@ createdAt: "2026-04-26T21:22:38.192Z"
 updatedAt: "2026-04-26T21:23:51.496Z"
 images:
   - url: "https://i.ibb.co/PvJrkMws/3a16333f6289.png"
-  - thumb: "https://i.ibb.co/sdcg7Cyp/3a16333f6289.png"
+    thumb: "https://i.ibb.co/sdcg7Cyp/3a16333f6289.png"
 title:
   en: Lv M29131
   zh:

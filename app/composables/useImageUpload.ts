@@ -10,7 +10,7 @@
 
 export interface UploadResult {
   url: string      // 原图 URL
-  thumb: string    // 缩略图 URL
+    thumb: string    // 缩略图 URL
 }
 
 export interface UploadProgress {
@@ -91,7 +91,7 @@ export function useImageUpload() {
 
     return {
       url: json.data.display_url,
-      thumb: json.data.thumb?.url || json.data.display_url,
+        thumb: json.data.thumb?.url || json.data.display_url,
     }
   }
 
